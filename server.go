@@ -47,7 +47,6 @@ func FetchAuth(uuid string, rds *redis.Client) {
 	// redis 에 저장된 적이 없거나 토큰의 유효 기간이 만료된 경우 에러 발생
 	if err == redis.Nil {
 		fmt.Println("key2 does not exist")
-		fmt.Println("키가 없는 값일 때 무엇을 리턴할까?")
 		fmt.Printf("non key id -> %v", id)
 	} else if err != nil {
 		panic(err)
